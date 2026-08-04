@@ -6,9 +6,6 @@ function isPalindrome(num){
         reverse = reverse * 10 + digit;
         num = Math.floor(num /10);
     }
-    let reverse: number
+
     return original === reverse
 }
-
-console.log(isPalindrome(151));
-console.log(isPalindrome(1325));
