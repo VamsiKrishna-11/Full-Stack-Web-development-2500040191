@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Background setup */
+    background: linear-gradient(rgba(10, 5, 20, 0.25), rgba(10, 5, 20, 0.25)),
+                url('https://img.magnific.com/free-photo/futuristic-car-illustration_23-2151685429.jpg?semt=ais_hybrid&w=740&q=80g');
+    background-size: cover;
+    background-position: left center; /* Keeps the car on the left visible */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Push the card to the right side */
+    display: flex;
+    justify-content: flex-end; /* Aligns card to the right */
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 8%; /* Adds spacing from the right edge */
+}
+
+/* Compact Glassmorphism Card */
+.form-container {
+    background: rgba(18, 12, 34, 0.72); /* More transparent so the sunset shows through */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 1.8rem 2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 46, 151, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(255, 46, 151, 0.2);
+    width: 100%;
+    max-width: 380px; /* Reduced width for a compact, sleek profile */
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(255, 46, 151, 0.6), 
+                 0 0 20px rgba(255, 179, 0, 0.4);
+}
+
+/* Form Groups & Labels */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    font-size: 0.82rem;
+}
+
+.required {
+    color: #ffb703;
+}
+
+/* Input Fields */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: rgba(12, 8, 24, 0.85);
+    border: 1px solid rgba(255, 46, 151, 0.25);
+    border-radius: 7px;
+    padding: 0 12px;
+    transition: all 0.25s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: #00f0ff;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.45);
+}
+
+.input-wrapper .icon {
+    color: #ff2e97;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.input-wrapper .icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 10px 0;
+    font-size: 0.88rem;
+    font-family: inherit;
+}
+
+.input-wrapper input::placeholder {
+    color: #7a6e99;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 10px 14px;
+    background: linear-gradient(90deg, #ff2e97 0%, #ff7b00 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 1.2rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(255, 46, 151, 0.45);
+}
+
+.submit-btn:hover {
+    opacity: 0.95;
+    box-shadow: 0 6px 20px rgba(255, 46, 151, 0.7);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0) scale(0.99);
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 768px) {
+    body {
+        justify-content: center;
+        padding: 20px;
+    }
+}
